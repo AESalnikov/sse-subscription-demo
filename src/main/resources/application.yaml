@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: sse-subscription-demo
+  kafka:
+    application-id: sse-subscription-demo-id
+    bootstrap-servers: localhost:9092
+    subscription:
+      topic: sse-subscription-demo-topic
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/events?replicaSet=rs0&directConnection=true
+      auto-index-creation: true
+  docker:
+    compose:
+      profiles:
+        active: local
+      lifecycle-management: start_and_stop
+      enabled: true

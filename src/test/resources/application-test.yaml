@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: sse-subscription-demo
+  kafka:
+    application-id: sse-subscription-demo-id
+    subscription:
+      topic: sse-subscription-demo-topic
